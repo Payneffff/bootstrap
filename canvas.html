@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="a1" width="500" height="500"></canvas>
+</body>
+<script>
+    var a = document.getElementById("a1");
+    var ctx = a.getContext("2d");
+    ctx.beginPath();
+    ctx.fillStyle = "green";
+    ctx.lineWidth = 5;
+    ctx.strokeStyle = "#F5270B";/*边框颜色*/
+    ctx.moveTo(50, 150);/*起点*/
+    ctx.lineTo(200, 50);/*终点*/
+    ctx.lineTo(350, 150);/*终点*/
+    ctx.strokeRect(50, 150, 300, 150);/*画矩形*/
+    ctx.strokeRect(80, 180, 80, 80);/*画矩形*/
+    ctx.stroke();/*画图*/
+    ctx.fill();/*填充*/
+    ctx.closePath();
+
+    ctx.beginPath();
+    ctx.fillStyle = "green";
+    ctx.fillRect(250, 200, 60, 100);/*画矩形*/
+    ctx.fill();
+    ctx.stroke();
+    ctx.closePath();
+</script>
+
+</html>
